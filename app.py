@@ -49,8 +49,7 @@ def welcome():
 
 @app.route("/api/v1.0/precipitation")
 def precipitation():
-    results = session.query(Measurement.date, Measurement.prcp).\
-        filter(Measurement.date >= "2016-08-23").\
+    results = session.query(Measurement).filter(Measurement.date >= "2016-08-23").\
         filter(Measurement.date <= "2017-08-23").all()
 
     precip_dictionary = []
