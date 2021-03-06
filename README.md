@@ -11,9 +11,15 @@ I am conducting climate analysis of Honolulu, Hawaii in preparation for an upcom
 #
 I created a Climate App using Flask API based on the created queries.
 - The app has the following routes: 
-/ home page
-/api/v1.0/precipitation
-/api/v1.0/stations
-/api/v1.0/tobs
-/api/v1.0/<start>
-/api/v1.0/<start>/<end>
+
+/ a landing home page that displays all available routes
+
+/api/v1.0/precipitation - returns a jsonified version of precipitation results
+
+/api/v1.0/stations - this endpoint returns a jsonified list of weather stations
+
+/api/v1.0/tobs - a jsonified list of temperatures observations (TOBS) for the previous year are returned
+
+/api/v1.0/<start> - by specifying a starting date you are givin a jsonfied view of the minimum, maximum and average temperatures for all dates great than or equal to the date supplied
+
+/api/v1.0/<start>/<end> - min, max and average temperatures are returned (jsonified) for the period of time specified by the start and end dates inclusive. 
